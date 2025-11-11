@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.geometry.Insets?>
+
+<VBox xmlns="http://javafx.com/javafx/21" 
+      xmlns:fx="http://javafx.com/fxml/1" 
+      fx:controller="com.sekhmet.ui.controllers.EditRecordController" 
+      spacing="8" 
+      padding="12">
+    
+    <GridPane hgap="8" vgap="8">
+        <Label text="Case No:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+        <TextField fx:id="caseNoField" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+        
+        <Label text="Last Name:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+        <TextField fx:id="lastField" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+        
+        <Label text="First Name:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+        <TextField fx:id="firstField" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+        
+        <Label text="Middle Name:" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+        <TextField fx:id="middleField" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+        
+        <Label text="Date Added:" GridPane.rowIndex="4" GridPane.columnIndex="0"/>
+        <TextField fx:id="dateField" GridPane.rowIndex="4" GridPane.columnIndex="1"/>
+        
+        <Label text="Status:" GridPane.rowIndex="5" GridPane.columnIndex="0"/>
+        <TextField fx:id="statusField" GridPane.rowIndex="5" GridPane.columnIndex="1"/>
+    </GridPane>
+    
+    <HBox spacing="12">
+        <VBox spacing="6">
+            <Label text="Hospitalizations"/>
+            <ListView fx:id="hospList" prefHeight="120"/>
+            <HBox>
+                <Button text="Add" onAction="#onAddHospital"/>
+                <Button text="Delete Selected" onAction="#onDeleteHospital"/>
+            </HBox>
+        </VBox>
+        
+        <VBox spacing="6">
+            <Label text="Medications"/>
+            <ListView fx:id="medList" prefHeight="120"/>
+            <HBox>
+                <Button text="Add" onAction="#onAddMedication"/>
+                <Button text="Delete Selected" onAction="#onDeleteMedication"/>
+            </HBox>
+        </VBox>
+        
+        <VBox spacing="6">
+            <Label text="Documentations"/>
+            <ListView fx:id="docList" prefHeight="120"/>
+            <HBox>
+                <Button text="Upload Document" onAction="#onUploadDoc"/>
+                <Button text="Download Selected" onAction="#onDownloadDoc"/>
+            </HBox>
+        </VBox>
+    </HBox>
+    
+    <HBox spacing="8" alignment="CENTER_RIGHT">
+        <Button text="Delete Patient (admin)" onAction="#onDeletePatient"/>
+        <Button text="Save" onAction="#onSave"/>
+        <Button text="Close" onAction="#onClose"/>
+    </HBox>
+</VBox>

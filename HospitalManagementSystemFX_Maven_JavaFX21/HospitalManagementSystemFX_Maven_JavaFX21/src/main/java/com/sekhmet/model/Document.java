@@ -1,0 +1,1 @@
+package com.sekhmet.model; public class Document{ public int id; public String filename,uploadedAt; public byte[] data; public Document(int id,String filename,byte[] data,String uploadedAt){this.id=id;this.filename=filename;this.data=data;this.uploadedAt=uploadedAt;} }

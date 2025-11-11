@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane xmlns="http://javafx.com/javafx/21" 
+            xmlns:fx="http://javafx.com/fxml/1" 
+            fx:controller="com.sekhmet.ui.controllers.MainController">
+    
+    <left>
+        <VBox fx:id="sidebar" spacing="8" styleClass="sidebar">
+            <Label text="Sekhmet Medical Center" styleClass="sidebar-title"/>
+            <Button text="Dashboard" onAction="#showDashboard"/>
+            <Button text="Patient Management" onAction="#showPatientManagement"/>
+            <Button text="Appointment Scheduling" onAction="#showAppointment"/>
+            <Button text="Medical Records" onAction="#showMedicalRecords"/>
+            <Button text="Billing" onAction="#showBilling"/>
+            <Separator/>
+            <Button text="Help" onAction="#showHelp"/>
+            <Button text="Maintenance" onAction="#showMaintenance"/>
+        </VBox>
+    </left>
+    
+    <center>
+        <StackPane fx:id="pages" styleClass="content-pane"/>
+    </center>
+</BorderPane>

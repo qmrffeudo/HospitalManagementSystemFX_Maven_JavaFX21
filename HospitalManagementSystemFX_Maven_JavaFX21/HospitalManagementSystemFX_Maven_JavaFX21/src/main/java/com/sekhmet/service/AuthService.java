@@ -1,0 +1,1 @@
+package com.sekhmet.service; import com.sekhmet.dao.UserDao; import com.sekhmet.model.User; public class AuthService{ private UserDao userDao=new UserDao(); public User authenticate(String username,String password){ try{ User u=userDao.findByUsername(username); if(u!=null && u.password.equals(password)) return u; }catch(Exception ex){ex.printStackTrace();} return null; } }

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.geometry.Insets?>
+
+<VBox xmlns="http://javafx.com/javafx/21" 
+      xmlns:fx="http://javafx.com/fxml/1" 
+      fx:controller="com.sekhmet.ui.controllers.MedicalRecordsController" 
+      spacing="8">
+    
+    <HBox spacing="12" alignment="CENTER_LEFT">
+        <Label text="Medical Records" styleClass="page-title"/>
+        <Button text="+ ADD" onAction="#onAdd"/>
+        <Button text="⟳" onAction="#onRefresh"/>
+        <Region HBox.hgrow="ALWAYS"/>
+        <TextField fx:id="searchField" promptText="Search? (filters whole dataset)"/>
+    </HBox>
+    
+    <TableView fx:id="table" VBox.vgrow="ALWAYS">
+        <columns>
+            <TableColumn fx:id="caseNoCol" text="Case No."/>
+            <TableColumn fx:id="lastNameCol" text="Last Name"/>
+            <TableColumn fx:id="firstNameCol" text="First Name"/>
+            <TableColumn fx:id="middleNameCol" text="Middle Name"/>
+            <TableColumn fx:id="dateAddedCol" text="Date Added"/>
+            <TableColumn fx:id="statusCol" text="Status"/>
+            <TableColumn fx:id="actionCol" text="History"/>
+        </columns>
+    </TableView>
+</VBox>

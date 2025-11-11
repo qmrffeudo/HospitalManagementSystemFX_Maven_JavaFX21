@@ -1,0 +1,1 @@
+package com.sekhmet.model; public class Hospitalization{ public int id; public String date,type,place; public Hospitalization(int id,String date,String type,String place){this.id=id;this.date=date;this.type=type;this.place=place;} }

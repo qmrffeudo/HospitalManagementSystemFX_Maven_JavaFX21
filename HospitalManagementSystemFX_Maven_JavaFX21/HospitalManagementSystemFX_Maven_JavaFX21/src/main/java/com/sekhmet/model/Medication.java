@@ -1,0 +1,1 @@
+package com.sekhmet.model; public class Medication{ public int id; public String prescribedDate,medicine,dosage; public Medication(int id,String prescribedDate,String medicine,String dosage){this.id=id;this.prescribedDate=prescribedDate;this.medicine=medicine;this.dosage=dosage;} }

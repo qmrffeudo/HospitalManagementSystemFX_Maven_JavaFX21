@@ -1,0 +1,1 @@
+package com.sekhmet.model; public class User { public int id; public String username,password,role; public User(int id,String u,String p,String r){this.id=id;this.username=u;this.password=p;this.role=r;} }
